@@ -1,0 +1,14 @@
+.game-selector  {
+  width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1280px) {
+  .game-selector {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+}

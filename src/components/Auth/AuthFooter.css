@@ -1,0 +1,77 @@
+.auth-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.tos {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: rgba(var(--white-primary-rgb-values), 0.8);
+  width: 80%;
+  text-align: center;
+}
+
+.tos a {
+  color: var(--white-primary);
+  font-weight: bold;
+}
+
+.external-auth {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.external-auth p {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 0.8rem;
+  color: rgba(var(--white-primary-rgb-values), 0.5);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.external-auth p::before {
+  content: '';
+  width: 44%;
+  height: 1px;
+  background: rgba(var(--white-primary-rgb-values), 0.5);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.external-auth p::after {
+  content: '';
+  width: 44%;
+  height: 1px;
+  background: rgba(var(--white-primary-rgb-values), 0.5);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.external-auth__buttons {
+  display: flex;
+}
+
+.external-auth__button {
+  padding: 5px 3.5rem;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.external-auth__button:nth-child(1) {
+  background-color: rgb(247, 247, 247);
+}
+
+.external-auth__button:nth-child(2) {
+  background-color: rgb(33, 34, 39);
+}
+
+.external-auth__button img {
+  max-width: 25px;
+}

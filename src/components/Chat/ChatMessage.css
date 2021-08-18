@@ -1,0 +1,113 @@
+.message {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto';
+}
+
+.message-author {
+  width: 100%;
+  display: flex;
+  align-items: center ;
+  margin-bottom: 8px;
+}
+
+.message-avatar {
+  min-width: 34px;
+  min-height: 34px;
+  background: gray;
+  position: relative;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.message-avatar img{
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  z-index: 10;
+}
+
+.player-level {
+  z-index: 15;
+  position: absolute;
+  left: 5px;
+  transform: translateX(-50%);
+  bottom: -5px;
+  padding: 2px 3px;
+  line-height: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  background: gray;
+}
+
+.author-name {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(var(--white-primary-rgb-values), 0.8)
+}
+
+.message-content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.message-timestamp {
+  color: rgba(var(--white-primary-rgb-values), 0.8);
+  font-size: 10px;
+  min-width: 34px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.message-text {
+  position: relative;
+  top: -10px;
+  color: var(--chat-message-text);
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.lvl-1 {
+  background: gray !important;
+}
+
+.lvl-10 {
+  background: rgb(204, 170, 21) !important;
+}
+
+.lvl-20 {
+  background: rgb(49, 168, 19) !important;
+}
+
+.lvl-30 {
+  background: rgb(23, 173, 173) !important;
+}
+
+.lvl-40 {
+  background: rgb(38, 41, 192) !important;
+}
+
+.lvl-50 {
+  background: rgb(209, 55, 34);
+}
+
+.lvl-60 {
+  background: rgb(15, 168, 109) !important;
+}
+
+.lvl-70 {
+  background: rgb(219, 125, 18) !important;
+}
+
+.lvl-80 {
+  background: rgb(245, 21, 125) !important;
+}
+
+.lvl-90 {
+  background: rgb(190, 11, 206);
+}

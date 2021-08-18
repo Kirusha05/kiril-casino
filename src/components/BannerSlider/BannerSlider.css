@@ -1,0 +1,45 @@
+.banner-slider {
+  margin: 1.5rem auto;
+  background: transparent;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banners {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  overflow-x: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--blue-dark);
+}
+
+.slide-buttons {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.slide-buttons__button {
+  background-color: var(--blue-darker);
+  width: 1.5rem;
+  height: 0.7rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s ease-out;
+}
+
+.slide-buttons__button.active {
+  background-color: var(--yellow-primary);
+  box-shadow: 0 0 5px var(--yellow-primary);
+}
+
+@media screen and (max-width: 1280px) {
+  .banner-slider {
+    width: 90% !important;
+  }
+}

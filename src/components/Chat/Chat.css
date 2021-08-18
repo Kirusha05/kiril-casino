@@ -1,0 +1,138 @@
+.chat {
+  width: var(--chat-width);
+  background-color: var(--blue-darker);
+  position: fixed;
+  top: var(--nav-height);
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.chat.hidden {
+  transform: translateX(-101%);
+}
+
+.chat-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.chat-close img {
+  max-height: 15px;
+}
+
+.chat-social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.chat-social a {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.chat-social a img {
+  max-height: 100%;
+}
+
+.chat-messages {
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chat-messages::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  display: none;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: var(--blue-darker);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: var(--yellow-primary);
+  border-radius: 10px;
+}
+
+.chat form {
+  width: 100%;
+  background-color: var(--blue-darker);
+  height: 2rem;
+}
+
+.chat form input {
+  background-color: transparent;
+  flex: 1;
+  height: 100%;
+  color: var(--white-primary);
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.chat form button {
+  height: 100%;
+  color: var(--yellow-primary);
+  background-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.chat form button img {
+  max-height: 70%;
+}
+
+.toggle-chat {
+  position: absolute;
+  left: 102%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  height: 35px;
+  width: 35px;
+  transition: 0.3s ease;
+}
+
+.toggle-chat img {
+  max-height: 70%;
+  transition: transform 0.2s ease-in;
+}
+
+.toggle-chat img.invert {
+  transform: rotate(180deg);
+}
+
+.toggle-chat:hover img {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(32%) saturate(982%)
+    hue-rotate(355deg) brightness(90%) contrast(96%);
+}
+
+@media screen and (max-width: 1280px) {
+  .chat {
+    width: 250px;
+    top: 0;
+    left: var(--nav-width);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chat {
+    transition: none;
+    width: calc(100% - var(--nav-width));
+  }
+}

@@ -1,0 +1,49 @@
+.banner {
+  background-color: var(--blue-dark);
+  padding: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0;
+  transition: 0.2s ease-out;
+}
+
+.banner * {
+  margin: 0;
+}
+
+.banner h1 {
+  font-family: 'Oswald', 'sans-serif';
+  font-weight: normal;
+}
+
+.banner h2, .banner p {
+  font-family: 'Proxima Nova', 'sans-serif';
+  font-weight: normal;
+  margin: 0.8rem 0;
+}
+
+.banner p {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1280px) {
+  .banner {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner h2 {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  .banner p {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+}

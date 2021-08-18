@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+  src: url('./fonts/proxima-nova/Proxima-Nova.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  src: url('./fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  src: url('./fonts/open-sans/OpenSans-Bold.ttf') format('truetype');
+}
+
+:root {
+  --blue-dark: #2e2c49;
+  --blue-darker: #282641;
+
+  --bg-primary: #33314d;
+
+  --yellow-accent: #ffb019;
+  --yellow-primary: #e2a128;
+  --yellow-darker: #976f27;
+
+  --white-primary: rgb(235, 235, 235);
+  --white-primary-rgb-values: 235, 235, 235;
+
+  --chat-message-text: rgb(173, 173, 173);
+
+  --danger-primary: rgb(255, 101, 101);
+
+  --nav-width: 4rem;
+  --nav-height: 3rem;
+
+  --chat-width: 250px;
+}
+
+:root::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+:root::-webkit-scrollbar-track {
+  background-color: var(--blue-darker);
+}
+
+:root::-webkit-scrollbar-thumb {
+  background: var(--yellow-primary);
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Lato', sans-serif;
+  background-color: var(--bg-primary);
+  color: rgb(236, 236, 236);
+}
+
+main {
+  background-image: url(./assets/img/waves/wave-1.svg );
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.emphasize {
+  color: var(--yellow-primary);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon:hover {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(32%) saturate(982%) hue-rotate(355deg) brightness(90%) contrast(96%);
+}
+
+.no-scroll {
+  overflow: hidden  ;
+}

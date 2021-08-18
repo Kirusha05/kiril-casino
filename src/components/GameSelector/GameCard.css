@@ -1,0 +1,47 @@
+.game-card {
+  width: 440px;
+  background-color: var(--blue-dark);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease-out;
+}
+
+.game-card a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.game-card a:hover h2 {
+  color: var(--yellow-primary);
+  text-shadow: 0 0 10px var(--yellow-primary);
+}
+
+.game-card__image {
+  height: 170px;
+}
+
+.game-card h2 {
+  width: 100%;
+  margin: 0;
+  padding: 5px 0;
+  border-radius: 0 0 10px 10px;
+
+  background-color: var(--blue-darker);
+  color: rgba(var(--white-primary-rgb-values), 0.5);
+
+  text-align: center;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 1280px) {
+  .game-card {
+    width: 100%;
+  }
+}

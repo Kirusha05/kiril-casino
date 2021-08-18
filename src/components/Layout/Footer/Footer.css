@@ -1,0 +1,14 @@
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: rgba(var(--white-primary-rgb-values), 0.6);
+  background-color: #1a182e;
+  position: relative;
+  top: -2px;
+  transition: 0.3s ease;
+}
+
+.text-logo {
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--yellow-primary);
+}
