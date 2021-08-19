@@ -39,11 +39,9 @@ const chatReducer = (state = initialState, action) => {
       return { ...state, chatIsActive: !state.chatIsActive };
     case ADD_MESSAGE:
       const dateTime = new Date(action.timestamp);
-      const messageTime = `${dateTime
-        .getHours()
-        .toLocaleString('en-us', { minute: '2-digit' })}:${dateTime
-        .getMinutes()
-        .toLocaleString('en-us', { minute: '2-digit' })}`;
+      const hours = dateTime.getHours() < 10 ? `0${dateTime.getHours()}` : dateTime.getHours();
+      const minutes = dateTime.getMinutes() < 10 ? `0${dateTime.getMinutes()}` : dateTime.getMinutes();
+      const messageTime = `${hours}:${minutes}`;
 
       const randomLvl = Math.ceil(Math.random() * 99);
       const randomLvlRange = Math.floor(randomLvl / 10) * 10;

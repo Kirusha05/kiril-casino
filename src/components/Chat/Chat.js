@@ -50,7 +50,8 @@ const Chat = () => {
 
     // Scroll to the last message after 10ms, idk why it doesn't work without a short timeout
     setTimeout(() => {
-      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
     }, 10);
   };
 
@@ -68,6 +69,12 @@ const Chat = () => {
     </button>
   );
 
+  const closeChatMobile = windowSize.width <= 1280 && (
+    <div className="chat-close" onClick={toggleChatHandler}>
+      <img src={closeIcon} alt="Close Chat" />
+    </div>
+  );
+
   const messagesList = messages.map((message) => (
     <ChatMessage
       key={message.id}
@@ -81,11 +88,9 @@ const Chat = () => {
 
   return (
     <div className={`chat${!chatIsActive ? ' hidden' : ''}`}>
-      {windowSize.width <= 1280 && (
-        <div className="chat-close" onClick={toggleChatHandler}>
-          <img src={closeIcon} alt="Close Chat" />
-        </div>
-      )}
+      {/* Show to chat toggling button only on screens narrower than 1280px */}
+      {closeChatMobile}
+      {toggleChatButton}
       <div className="chat-social">
         {socialIcons.map((socialIcon, id) => (
           <a key={id} href={socialIcon.href} target="_blank" rel="noreferrer">
@@ -106,7 +111,6 @@ const Chat = () => {
           <img src={sendIcon} alt="Send" />
         </button>
       </form>
-      {toggleChatButton}
     </div>
   );
 };

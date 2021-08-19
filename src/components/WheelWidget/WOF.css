@@ -1,0 +1,27 @@
+.wof {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+
+  display: block;
+  background: url(../../assets/img/games-related/wheel2.png);
+  background-size: 100%;
+}
+
+.control-wheel {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.control-wheel input {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 50px;
+}

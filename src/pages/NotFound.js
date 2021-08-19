@@ -5,13 +5,13 @@ import Banner from '../components/UI/Banner/Banner';
 const NotFound = () => {
   return (
     <>
-    <Banner
-      individual
-      title="404"
-      subtitle="Page Not Found"
-      details={`The requested page doesn't exist!`}
-    />
-    <button>Return to {<Link to="/">homepage</Link>}</button>
+      <Banner
+        individual
+        title="404"
+        subtitle="Page Not Found"
+        details={`The requested page doesn't exist!`}
+      />
+      <button>Return to {<Link to="/">homepage</Link>}</button>
     </>
   );
 };

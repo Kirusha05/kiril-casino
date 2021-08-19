@@ -6,7 +6,7 @@
 }
 
 .main-section main {
-  padding: 0 2rem;
+  padding: 2rem 2rem 0;
 }
 
 .chat-push {
@@ -16,14 +16,14 @@
 
 @media screen and (max-width: 1280px) {
   .main-section {
-    padding-top: 1rem;
+    padding-top: 0;
     margin-left: var(--nav-width);
     width: calc(100% - var(--nav-width));
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 500px) {
   .main-section main {
-    padding: 0;
+    padding: 2rem 0 0 0;
   }
 }

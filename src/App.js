@@ -9,6 +9,8 @@ import Auth from './components/Auth/Auth';
 import Homepage from './pages/Homepage';
 import NotFound from './pages/NotFound';
 
+import WheelPage from './pages/WheelPage';
+
 function App() {
   const authIsActive = useSelector((state) => state.auth.authModalIsActive);
 
@@ -24,7 +26,7 @@ function App() {
           <Homepage />
         </Route>
         <Route path="/wheel">
-          <h1>Wheel Game</h1>
+          <WheelPage />
         </Route>
         <Route path="/crash">
           <h1>Crash Game</h1>
