@@ -26,14 +26,16 @@
 :root {
   --blue-dark: #2e2c49;
   --blue-darker: #282641;
+  --blue-darkest: #1a182e;
 
   --bg-primary: #33314d;
 
   --yellow-primary: #e2a128;
-  --yellow-darker: #976f27;
 
   --white-primary: rgb(235, 235, 235);
   --white-primary-rgb-values: 235, 235, 235;
+
+  --white-shiny: rgb(255, 255, 255);
 
   --chat-message-text: rgb(173, 173, 173);
 
@@ -43,6 +45,11 @@
   --nav-height: 3rem;
 
   --chat-width: 250px;
+
+  --casino-gray: #5c5c5c;
+  --casino-red: #cf3248;
+  --casino-blue: #3caed3;
+  --casino-yellow: #ffb744;
 }
 
 :root::-webkit-scrollbar {
@@ -67,7 +74,7 @@ body {
 }
 
 main {
-  background-image: url(./assets/img/waves/wave-1.svg );
+  background-image: url(./assets/img/waves/wave-1.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -86,6 +93,10 @@ p {
   margin: 0;
 }
 
+svg {
+  height: auto;
+}
+
 .emphasize {
   color: var(--yellow-primary);
 }
@@ -96,10 +107,22 @@ p {
   align-items: center;
 }
 
-.nav-icon:hover {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(32%) saturate(982%) hue-rotate(355deg) brightness(90%) contrast(96%);
+.general-icon:hover {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(32%) saturate(982%)
+    hue-rotate(355deg) brightness(90%) contrast(96%);
 }
 
 .no-scroll {
-  overflow: hidden  ;
+  overflow: hidden;
+}
+
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url('./assets/img/games-related/wheel.png')
+    url('./assets/img/games-related/indicator-icon.svg')
+    url('./assets/img/games-related/timer-icon.svg');
 }

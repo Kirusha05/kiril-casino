@@ -7,14 +7,14 @@
 }
 
 .auth-title p {
-  color:rgba(var(--white-primary-rgb-values), 0.6);
+  color: rgba(var(--white-primary-rgb-values), 0.6);
   margin: 0;
   pointer-events: none;
   font-size: 0.8rem;
 }
 
 .auth-title p::before {
-  content: '';
+  content: "";
   width: 5px;
   height: 1px;
   background: rgba(var(--white-primary-rgb-values), 0.5);
@@ -23,7 +23,7 @@
 }
 
 .auth-title p::after {
-  content: '';
+  content: "";
   width: 5px;
   height: 1px;
   background: rgba(var(--white-primary-rgb-values), 0.5);
@@ -37,11 +37,11 @@
   border: none;
   font-size: 1.3rem;
   text-transform: uppercase;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   transition: 0.3s ease;
   cursor: pointer;
   position: relative;
-  padding: 0; 
+  padding: 0;
 }
 
 .auth-title button.active {
@@ -49,8 +49,8 @@
 }
 
 .auth-title button.active::after {
-  content: '';
-  display:inline-block;
+  content: "";
+  display: inline-block;
   height: 1px;
   background-color: var(--yellow-primary);
   box-shadow: 0 0 10px var(--yellow-primary);
@@ -70,5 +70,4 @@
 }
 
 @media screen and (max-width: 566px) {
-  
 }

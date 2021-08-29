@@ -2,11 +2,11 @@
   width: 440px;
   background-color: var(--blue-dark);
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .game-card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transition: 0.2s ease-out;
 }
 
@@ -24,6 +24,10 @@
 
 .game-card__image {
   height: 170px;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .game-card h2 {
@@ -43,5 +47,17 @@
 @media screen and (max-width: 1280px) {
   .game-card {
     width: 100%;
+  }
+
+  .game-card__image {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .game-card__image {
+    width: auto;
+    margin: 0;
   }
 }

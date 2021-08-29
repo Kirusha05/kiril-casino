@@ -1,0 +1,87 @@
+.bet-card {
+  width: 24%;
+  height: 460px;
+  font-family: 'Roboto';
+  padding-bottom: 10px;
+}
+
+.bet-card.gray {
+  border-bottom: 3px solid var(--casino-gray);
+}
+
+.bet-card.red {
+  border-bottom: 3px solid var(--casino-red);
+}
+
+.bet-card.blue {
+  border-bottom: 3px solid var(--casino-blue);
+}
+
+.bet-card.yellow {
+  border-bottom: 3px solid var(--casino-yellow);
+}
+
+
+.bet-card.gray .bet-card__title {
+  background-color: var(--casino-gray);
+}
+
+.bet-card.red .bet-card__title {
+  background-color: var(--casino-red);
+}
+
+.bet-card.blue .bet-card__title {
+  background-color: var(--casino-blue);
+}
+
+.bet-card.yellow .bet-card__title {
+  background-color: var(--casino-yellow);
+}
+
+.bet-card.gray .player-bet,
+.bet-card.gray .cash-icon {
+  color: var(--casino-gray);
+  fill: var(--casino-gray);
+}
+
+.bet-card.red .player-bet,
+.bet-card.red .cash-icon {
+  color: var(--casino-red);
+  fill: var(--casino-red);
+}
+
+.bet-card.blue .player-bet,
+.bet-card.blue .cash-icon {
+  color: var(--casino-blue);
+  fill: var(--casino-blue);
+}
+
+.bet-card.yellow .player-bet,
+.bet-card.yellow .cash-icon {
+  color: var(--casino-yellow);
+  fill: var(--casino-yellow);
+}
+
+/* .bet-card.gray .player-bet:last-child {
+  border-bottom: 1px solid var(--casino-gray) !important;
+}
+
+.bet-card.red .player-bet:last-child {
+  border-bottom: 1px solid var(--casino-red) !important;
+}
+
+.bet-card.blue .player-bet:last-child {
+  border-bottom: 1px solid var(--casino-blue) !important;
+}
+
+.bet-card.yellow .player-bet:last-child {
+  border-bottom: 1px solid var(--casino-yellow) !important;
+} */
+
+@media screen and (max-width: 1000px) {
+  .bet-card {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}

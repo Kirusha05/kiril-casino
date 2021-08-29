@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { LOGIN, HIDE_AUTH } from '../../store/authReducer';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { LOGIN, HIDE_AUTH } from "../../store/authReducer";
 
-import Modal from '../UI/Modal/Modal';
-import AuthForm from './AuthForm';
-import AuthFooter from './AuthFooter';
+import Modal from "../UI/Modal/Modal";
+import AuthForm from "./AuthForm";
+import AuthFooter from "./AuthFooter";
 
-import closeIcon from '../../assets/img/icons/cancel.png';
-import './Auth.css';
-import useWindowSize from '../../hooks/use-windowSize';
+import closeIcon from "../../assets/img/icons/cancel.png";
+import "./Auth.css";
+import useWindowSize from "../../hooks/use-windowSize";
 
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);

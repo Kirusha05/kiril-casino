@@ -77,7 +77,9 @@ nav {
     max-width: 80%;
   }
 
-  nav, .nav-links, nav ul {
+  nav,
+  .nav-links,
+  nav ul {
     flex-direction: column;
     width: 100%;
   }

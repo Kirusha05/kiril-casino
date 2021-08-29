@@ -11,7 +11,7 @@ const Banner = (props) => {
       margin: '2rem auto',
       width: `${900}px`,
       height: `${180}px`,
-      borderRadius: '10px'
+      borderRadius: '10px',
     };
   } else {
     styles = {
@@ -21,16 +21,17 @@ const Banner = (props) => {
     };
   }
 
-  styles.height =
-    windowSize.width > 1088
-      ? `${props.height || 180}px`
-      : `auto`;
+  styles.height = windowSize.width > 1088 ? `${props.height || 180}px` : `auto`;
 
   return (
     <div className="banner" style={styles}>
       <h1 className="emphasize">{props.title}</h1>
       <h2>{props.subtitle}</h2>
-      <p>{props.details}</p>
+      {props.details.map((sentence, id) => (
+        <React.Fragment key={id}>
+          <p>{sentence}</p>
+        </React.Fragment>
+      ))}
     </div>
   );
 };

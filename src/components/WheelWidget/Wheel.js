@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import './WOF.css';
+import './Wheel.css';
 
 const extraDegrees = 3 * 360; // 3 full circles
 let isInitial = true;
@@ -19,10 +19,6 @@ const WOF = (props) => {
     transition: `none`,
   });
 
-  console.log('WOF ' + num);
-  console.log('Style:');
-  console.log(wheelStyle)
-
   useEffect(() => {
     if (isInitial) {
       isInitial = false;
@@ -32,26 +28,40 @@ const WOF = (props) => {
     // calculate degrees
     const degsToNum = getDegsToNumFromNeutral(num);
 
-    const extraOffset = Math.floor(Math.random() * 2);
+    // get random offset, to the left or the right, to give a "more random" effect
+    const extraOffset =
+      Math.random() > 0.5
+        ? Math.floor(Math.random() * 3)
+        : -1 * Math.floor(Math.random() * 3);
 
     // start the spinning, will be about 1000± degrees
     setWheelStyle({
-      transform: `rotateZ(${(degsToNum + extraDegrees + extraOffset).toFixed(2)}deg)`,
+      transform: `rotateZ(${(degsToNum + extraDegrees + extraOffset).toFixed(
+        2
+      )}deg)`,
       transition: `${spinDuration}ms ease`,
     });
 
     // set the wheel rotation point to the same num after 100ms, but without the extra spin, so during the next spins the wheel will ALWAYS rotate clockwise, will be under 360degs
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setWheelStyle({
         transition: 'none',
         transform: `rotateZ(${(degsToNum + extraOffset).toFixed(2)}deg)`,
       });
     }, spinDuration + 100);
+
+    return () => {
+      clearInterval(timeout);
+    };
   }, [num, spinDuration]);
+
+  // num won't change till the first spin, thus the above useEffect won't execute
+  // so set isInitial to true on unmount in another useEffect; it returns a cleanup function
+  useEffect(() => () => (isInitial = true), []);
 
   return (
     <>
-      <div className="wof" style={wheelStyle}></div>
+      <div className="wof" style={wheelStyle} />
     </>
   );
 };

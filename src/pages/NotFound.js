@@ -9,7 +9,7 @@ const NotFound = () => {
         individual
         title="404"
         subtitle="Page Not Found"
-        details={`The requested page doesn't exist!`}
+        details={[`The requested page doesn't exist!`]}
       />
       <button>Return to {<Link to="/">homepage</Link>}</button>
     </>

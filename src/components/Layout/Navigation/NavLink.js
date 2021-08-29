@@ -1,9 +1,20 @@
 import React from 'react';
-import { NavLink as Link} from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 
 import './NavLink.css';
 
-const NavLink = ({ name, icon, url, onHover, hasSeparator, isButton, onLinkClick, onClick }) => {
+const NavLink = (props) => {
+  const {
+    name,
+    icon,
+    url,
+    onHover,
+    hasSeparator,
+    isButton,
+    onLinkClick,
+    onClick,
+    isSvg,
+  } = props;
   return (
     <>
       <li
@@ -11,12 +22,12 @@ const NavLink = ({ name, icon, url, onHover, hasSeparator, isButton, onLinkClick
         onMouseEnter={onHover}
       >
         {!isButton ? (
-          <Link to={url} className="nav-icon" onClick={onLinkClick}>
-            <img src={icon} alt={name} />
+          <Link to={url} className="general-icon" onClick={onLinkClick}>
+            <img src={icon} alt={name} className={isSvg ? 'svg-icon' : ''} />
             {name}
           </Link>
         ) : (
-          <button onClick={onClick} className="nav-icon">
+          <button onClick={onClick} className="general-icon">
             <img src={icon} alt={name} />
           </button>
         )}

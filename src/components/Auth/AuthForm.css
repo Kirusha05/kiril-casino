@@ -42,7 +42,7 @@
   outline: none;
   padding-left: 0.5rem;
   color: rgba(var(--white-primary-rgb-values), 0.8);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
 
@@ -74,7 +74,7 @@
 }
 
 #show-password:checked::before {
-  content: '✔';
+  content: "✔";
   position: absolute;
   left: 2px;
   top: -1px;

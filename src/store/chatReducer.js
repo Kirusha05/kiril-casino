@@ -6,7 +6,7 @@ const initialState = {
       author: 'Gxme',
       level: 1,
       levelRange: 1,
-      time: '15:32',
+      timestamp: '15:32',
       id: 1,
     },
     {
@@ -14,7 +14,7 @@ const initialState = {
       author: 'Redea',
       level: 99,
       levelRange: 90,
-      time: '07:34',
+      timestamp: '07:34',
       id: 2,
     },
     {
@@ -22,7 +22,7 @@ const initialState = {
       author: 'System',
       level: 99,
       levelRange: 90,
-      time: '23:59',
+      timestamp: '23:59',
       id: 3,
     },
   ],
@@ -38,20 +38,12 @@ const chatReducer = (state = initialState, action) => {
     case TOGGLE_CHAT:
       return { ...state, chatIsActive: !state.chatIsActive };
     case ADD_MESSAGE:
-      const dateTime = new Date(action.timestamp);
-      const hours = dateTime.getHours() < 10 ? `0${dateTime.getHours()}` : dateTime.getHours();
-      const minutes = dateTime.getMinutes() < 10 ? `0${dateTime.getMinutes()}` : dateTime.getMinutes();
-      const messageTime = `${hours}:${minutes}`;
-
-      const randomLvl = Math.ceil(Math.random() * 99);
-      const randomLvlRange = Math.floor(randomLvl / 10) * 10;
-
       const newMessage = {
         text: action.text,
-        author: 'Kirusha',
-        level: randomLvl,
-        levelRange: randomLvlRange,
-        time: messageTime,
+        author: action.author,
+        level: action.level,
+        levelRange: action.levelRange,
+        timestamp: action.timestamp,
         id: state.messages[state.messages.length - 1].id + 1,
       };
 

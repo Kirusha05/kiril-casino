@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 const Homepage = () => {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
   let welcomeBack = null;
-  if (isLoggedIn) welcomeBack = <Banner title="Welcome!" subtitle="Good luck at gambling!" details="Acum bagă niște bani :)" individual />
+  if (isLoggedIn) welcomeBack = <Banner title="Welcome!" subtitle="Good luck at gambling!" details={["Acum bagă niște bani :)"]} individual />
 
   return (
     <>

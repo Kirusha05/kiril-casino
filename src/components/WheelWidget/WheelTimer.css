@@ -2,10 +2,11 @@
   position: absolute;
   top: 30%;
   left: 50%;
-  
-  transform: translate(-50%, -50%);
 
-  font-family: 'Proxima Nova', 'Open Sans';
+  transform: translate(-50%, -50%);
+  z-index: 20;
+
+  font-family: "Proxima Nova", "Open Sans";
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -13,7 +14,7 @@
 .wheel-timer {
   height: 1.4rem;
   margin: 15px 0 0 18px;
-  
+
   font-size: 1.4rem;
 
   display: flex;
@@ -33,6 +34,7 @@
 
   .wheel-timer {
     height: 1.2rem;
+    font-size: 1.2rem;
     margin-left: 12px;
   }
 }

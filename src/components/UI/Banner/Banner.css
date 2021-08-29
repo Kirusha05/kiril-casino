@@ -12,19 +12,24 @@
 }
 
 .banner h1 {
-  font-family: 'Oswald', 'sans-serif';
+  font-family: "Oswald", "sans-serif";
   font-weight: normal;
 }
 
-.banner h2, .banner p {
-  font-family: 'Proxima Nova', 'sans-serif';
+.banner h2,
+.banner p {
+  font-family: "Proxima Nova", "sans-serif";
   font-weight: normal;
+}
+
+.banner h2 {
   margin: 0.8rem 0;
 }
 
 .banner p {
   opacity: 0.5;
   letter-spacing: 1px;
+  margin: 5px 0;
 }
 
 @media screen and (max-width: 1280px) {

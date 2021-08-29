@@ -8,10 +8,5 @@ export const password = (value) => {
   const hasLowercase = value.search(/[a-z]/g) < 0 ? false : true;
   const hasNumbers = value.search(/[1-9]/g) < 0 ? false : true;
   const hasEnoughChars = value.length >= 8;
-  return !!(
-    hasUppercase &&
-    hasLowercase &&
-    hasNumbers &&
-    hasEnoughChars
-  );
+  return !!(hasUppercase && hasLowercase && hasNumbers && hasEnoughChars);
 };

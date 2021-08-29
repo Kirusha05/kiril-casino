@@ -1,12 +1,12 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { SHOW_AUTH, LOGOUT } from '../../../store/authReducer';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { SHOW_AUTH, LOGOUT } from "../../../store/authReducer";
 
-import authIcon from '../../../assets/img/icons/user.svg';
+import authIcon from "../../../assets/img/icons/user.svg";
 // import logoutIcon from '../../../assets/img/icons/logout.png';
 // import flag from '../../../assets/img/flags/gb_flag.png';
 
-import './NavSettings.css';
+import "./NavSettings.css";
 
 const NavSettings = () => {
   const dispatch = useDispatch();
@@ -26,8 +26,8 @@ const NavSettings = () => {
     <ul className="nav-settings flex-center">
       <li className="flex-center">
         <button onClick={authClickHandler} className="nav-auth flex-center">
-          <img src={authIcon} alt="Authorization button" />
-          {!isLoggedIn ? 'Sign In' : 'Logout'}
+          <img src={authIcon} alt="Authorization button" draggable="false" />
+          {!isLoggedIn ? "Sign In" : "Logout"}
         </button>
       </li>
     </ul>

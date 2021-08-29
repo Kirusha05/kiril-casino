@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import useWindowSize from '../../../hooks/use-windowSize';
+import React from "react";
+import ReactDOM from "react-dom";
+import useWindowSize from "../../../hooks/use-windowSize";
 
-import './Modal.css';
+import "./Modal.css";
 
 const Backdrop = (props) => {
   return <div className="backdrop" onClick={props.onClose}></div>;
@@ -14,7 +14,8 @@ const ModalOverlay = (props) => {
   const windowSize = useWindowSize();
   let customSize = {};
   if (props.height && props.width) {
-    customSize.width = windowSize.width > 500 ? props.width : windowSize.width * 0.9;
+    customSize.width =
+      windowSize.width > 500 ? props.width : windowSize.width * 0.9;
     customSize.height = props.height;
     customSize.padding = `${customPadding}px`;
     customSize.left = `calc(50% - ${customSize.width / 2}px)`;
@@ -25,17 +26,20 @@ const ModalOverlay = (props) => {
 
   const modalStyles = {
     ...customSize,
-    ...props.style
-  }
+    ...props.style,
+  };
 
   return (
-    <div className={`modal ${props.className ? props.className : ''}`} style={modalStyles}>
+    <div
+      className={`modal ${props.className ? props.className : ""}`}
+      style={modalStyles}
+    >
       {props.children}
     </div>
   );
 };
 
-const portalElement = document.getElementById('overlays');
+const portalElement = document.getElementById("overlays");
 
 const Modal = (props) => {
   return (
@@ -45,11 +49,7 @@ const Modal = (props) => {
         portalElement
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay
-          {...props}
-        >
-          {props.children}
-        </ModalOverlay>,
+        <ModalOverlay {...props}>{props.children}</ModalOverlay>,
         portalElement
       )}
     </>

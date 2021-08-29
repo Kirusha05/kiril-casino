@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import timerIcon from '../../assets/img/games-related/timer-icon.svg';
-import './WheelTimer.css';
+import timerIcon from "../../assets/img/games-related/timer-icon.svg";
+import "./WheelTimer.css";
 
 const WheelTimer = (props) => {
   const { time } = props;

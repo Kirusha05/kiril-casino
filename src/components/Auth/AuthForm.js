@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import AuthTitle from './AuthTitle';
-import Spinner from '../UI/Spinner/Spinner';
-import useInput from '../../hooks/use-input';
+import AuthTitle from "./AuthTitle";
+import Spinner from "../UI/Spinner/Spinner";
+import useInput from "../../hooks/use-input";
 
-import * as validate from './validation';
+import * as validate from "./validation";
 
-import './AuthForm.css';
+import "./AuthForm.css";
 
 const AuthForm = (props) => {
   const [isLogin, setIsLogin] = useState(true);
@@ -89,10 +89,10 @@ const AuthForm = (props) => {
 
   // Messages to show as input errors
   const errorMsg = {
-    email: 'Email format is not valid!',
+    email: "Email format is not valid!",
     password:
-      'At least 8 characters, one uppercase, one lowercase, one number!',
-    passwordConfirm: 'Passwords do not match!',
+      "At least 8 characters, one uppercase, one lowercase, one number!",
+    passwordConfirm: "Passwords do not match!",
   };
 
   return (
@@ -105,22 +105,28 @@ const AuthForm = (props) => {
           <input
             id="email"
             type="email"
-            className={emailInputHasError && !isLogin ? 'error-box' : ''}
+            className={emailInputHasError && !isLogin ? "error-box" : ""}
             value={enteredEmail}
             onChange={emailChangeHandler}
             required
             placeholder="username@mail.com"
           />
-          {emailInputHasError && !isLogin && <p className="error">{errorMsg.email}</p>}
+          {emailInputHasError && !isLogin && (
+            <p className="error">{errorMsg.email}</p>
+          )}
         </div>
         {/* Password */}
         <div className="control-group">
           <label htmlFor="password">Password</label>
-          {!isLogin && <p className={passwordInputHasError ? "error" : ""}>{errorMsg.password}</p>}
+          {!isLogin && (
+            <p className={passwordInputHasError ? "error" : ""}>
+              {errorMsg.password}
+            </p>
+          )}
           <input
             id="password"
-            type={!showPass ? 'password' : 'text'}
-            className={passwordInputHasError && !isLogin ? 'error-box' : ''}
+            type={!showPass ? "password" : "text"}
+            className={passwordInputHasError && !isLogin ? "error-box" : ""}
             value={enteredPassword}
             onChange={passwordChangeHandler}
             required
@@ -133,8 +139,8 @@ const AuthForm = (props) => {
             <label htmlFor="password-confirm">Confirm Password</label>
             <input
               id="password-confirm"
-              type={!showPass ? 'password' : 'text'}
-              className={passwordConfirmInputHasError ? 'error-box' : ''}
+              type={!showPass ? "password" : "text"}
+              className={passwordConfirmInputHasError ? "error-box" : ""}
               value={enteredPasswordConfirm}
               onChange={passwordConfirmChangeHandler}
               required
@@ -153,7 +159,7 @@ const AuthForm = (props) => {
         {/* Submit Form */}
         <div className="actions">
           {!props.isLoading && (
-            <button>{isLogin ? 'Login' : 'Create account'}</button>
+            <button>{isLogin ? "Login" : "Create account"}</button>
           )}
           {props.isLoading && <Spinner />}
         </div>

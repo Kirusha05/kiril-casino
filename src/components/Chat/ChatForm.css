@@ -1,0 +1,29 @@
+.chat-form {
+  width: 100%;
+  background-color: var(--blue-darkest);
+  height: 2rem;
+}
+
+.chat-form input {
+  background-color: transparent;
+  flex: 1;
+  height: 100%;
+  color: var(--white-primary);
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.chat-form button {
+  height: 100%;
+  color: var(--yellow-primary);
+  background-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.chat-form button img {
+  max-height: 70%;
+}

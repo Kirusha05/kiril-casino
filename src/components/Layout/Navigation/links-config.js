@@ -1,40 +1,42 @@
-import wheelIcon from '../../../assets/img/nav-icons/wheel-icon.png';
-import crashIcon from '../../../assets/img/nav-icons/crash-icon.png';
-import diceIcon from '../../../assets/img/nav-icons/dice-icon.png';
-import coinIcon from '../../../assets/img/nav-icons/coin-icon.png';
-import rewardsIcon from '../../../assets/img/nav-icons/rewards-icon.png';
-import affiliatesIcon from '../../../assets/img/nav-icons/affiliates-icon.png';
+import wheelIcon from "../../../assets/img/nav-icons/wheel-icon.png";
+import crashIcon from "../../../assets/img/nav-icons/crash-icon.png";
+import diceIcon from "../../../assets/img/nav-icons/dice-icon.png";
+import coinIcon from "../../../assets/img/nav-icons/coinflip-icon.svg";
+import rewardsIcon from "../../../assets/img/nav-icons/rewards-icon.png";
+import affiliatesIcon from "../../../assets/img/nav-icons/affiliates-icon.svg";
 
 const linksConfig = [
   {
-    name: 'Wheel',
+    name: "Wheel",
     icon: wheelIcon,
-    url: '/wheel',
+    url: "/wheel",
   },
   {
-    name: 'Crash',
+    name: "Crash",
     icon: crashIcon,
-    url: '/crash',
+    url: "/crash",
   },
   {
-    name: 'Dice',
+    name: "Dice",
     icon: diceIcon,
-    url: '/dice',
+    url: "/dice",
   },
   {
-    name: 'Coinflip',
+    name: "Coinflip",
     icon: coinIcon,
-    url: '/coinflip',
+    url: "/coinflip",
+    isSvg: true
   },
   {
-    name: 'Rewards',
+    name: "Rewards",
     icon: rewardsIcon,
-    url: '/rewards',
+    url: "/rewards",
   },
   {
-    name: 'Affiliates',
+    name: "Affiliates",
     icon: affiliatesIcon,
-    url: '/affiliates',
+    url: "/affiliates",
+    isSvg: true
   },
 ];
 

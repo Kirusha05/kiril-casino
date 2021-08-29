@@ -8,25 +8,29 @@ const BANNERS_DATA = [
     title: 'Welcome to CSGOSPARK!',
     subtitle: (
       <>
-        Up to <span className="emphasize">$1000 BONUS</span> and{' '}
-        <span className="emphasize">FREE SPINS</span> for your{' '}
+        Up to <span className="emphasize">30%</span> and{' '}
+        <span className="emphasize">FREE REWARDS</span> for your{' '}
         <span className="emphasize">first deposit</span>
       </>
     ),
-    details:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget felis suscipit magna volutpat dapibus at sed enim. Proin congue pellentesque lectus quis facilisis. Vivamus porttitor dapibus dapibus.',
+    details: [
+      'Our 30% bonus only applies to real money deposits of atleast 10$.',
+      'Bonus funds must be wagered over 10x of their value in order to be claimed.'
+    ],
   },
   {
     title: 'Second slide!',
     subtitle: <>Second slide</>,
-    details:
+    details: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget felis suscipit magna volutpat dapibus at sed enim. Proin congue pellentesque lectus quis facilisis. Vivamus porttitor dapibus dapibus.',
+    ],
   },
   {
     title: 'Third slide!',
     subtitle: <>Third slide</>,
-    details:
+    details: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget felis suscipit magna volutpat dapibus at sed enim. Proin congue pellentesque lectus quis facilisis. Vivamus porttitor dapibus dapibus.',
+    ],
   },
 ];
 
@@ -57,7 +61,9 @@ const BannerSlider = () => {
         return (
           <span
             key={id}
-            className={`slide-buttons__button ${id === showingSlideId ? 'active' : ''}`}
+            className={`slide-buttons__button ${
+              id === showingSlideId ? 'active' : ''
+            }`}
             onClick={() => setShowingSlideId(id)}
           ></span>
         );
@@ -66,19 +72,21 @@ const BannerSlider = () => {
   );
 
   return (
-    <div className="banner-slider" style={{width: BANNER_WIDTH}}>
+    <div className="banner-slider" style={{ width: BANNER_WIDTH }}>
       <div className="banners">
-      {BANNERS_DATA.map((banner, id) => (
-        <Banner
-          key={id}
-          title={banner.title}
-          subtitle={banner.subtitle}
-          details={banner.details}
-          height={BANNER_HEIGHT}
-          width={BANNER_WIDTH}
-          marginLeft={id === 0 && (showingSlideId === 0 ? '0' : `-${showingSlideId}00%`)}
-        />
-      ))}
+        {BANNERS_DATA.map((banner, id) => (
+          <Banner
+            key={id}
+            title={banner.title}
+            subtitle={banner.subtitle}
+            details={banner.details}
+            height={BANNER_HEIGHT}
+            width={BANNER_WIDTH}
+            marginLeft={
+              id === 0 && (showingSlideId === 0 ? '0' : `-${showingSlideId}00%`)
+            }
+          />
+        ))}
       </div>
       {slideButtons}
     </div>

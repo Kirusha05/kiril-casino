@@ -1,0 +1,21 @@
+.chat-messages {
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none; /* hide in Firefox */
+}
+
+.chat-messages::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  display: none; /* hide in Webkit */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: var(--blue-darker);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: var(--yellow-primary);
+  border-radius: 10px;
+}

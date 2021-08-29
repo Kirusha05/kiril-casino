@@ -1,24 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import MainNavigation from './Navigation/MainNavigation';
-import Chat from '../Chat/Chat';
-import Footer from './Footer/Footer';
+import MainNavigation from "./Navigation/MainNavigation";
+import Chat from "../Chat/Chat";
+import Footer from "./Footer/Footer";
 
-import './Layout.css';
-import useWindowSize from '../../hooks/use-windowSize';
-import { useSelector } from 'react-redux';
+import "./Layout.css";
+import useWindowSize from "../../hooks/use-windowSize";
+import { useSelector } from "react-redux";
 
 const Layout = (props) => {
   const chatIsActive = useSelector((state) => state.chat.chatIsActive);
   const windowSize = useWindowSize();
-  const mainWaveOffset = windowSize.width * 0.2;
+  const mainWaveOffset = windowSize.width * 0.2; // pixels
 
   return (
     <>
       <MainNavigation />
       <Chat />
-      <div className={`main-section ${chatIsActive ? 'chat-push' : ''}`}>
-        <main style={{ paddingBottom: `${mainWaveOffset}px` }}>
+      <div className={`main-section ${chatIsActive ? "chat-push" : ""}`}>
+        <main style={{ paddingBottom: `20vh` }}>
           {props.children}
         </main>
         <Footer />

@@ -1,17 +1,17 @@
-import React, { useCallback, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { TOGGLE_CHAT } from '../../../store/chatReducer';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { TOGGLE_CHAT } from "../../../store/chatReducer";
+import { Link } from "react-router-dom";
 
-import './MainNavigation.css';
-import logo from '../../../assets/img/logos/logo.svg';
-import chatIcon from '../../../assets/img/icons/chat.png';
+import "./MainNavigation.css";
+import logo from "../../../assets/img/logos/logo.svg";
+import chatIcon from "../../../assets/img/icons/chat.png";
 
-import linksConfig from './links-config';
+import linksConfig from "./links-config";
 
-import NavLink from './NavLink';
-import NavSettings from './NavSettings';
-import useWindowSize from '../../../hooks/use-windowSize';
+import NavLink from "./NavLink";
+import NavSettings from "./NavSettings";
+import useWindowSize from "../../../hooks/use-windowSize";
 
 const MainNavigation = () => {
   const dispatch = useDispatch();
@@ -22,7 +22,11 @@ const MainNavigation = () => {
 
   const isMobile = windowSize.width <= 1280;
 
-  let navIndicatorStyles = linksPosInfo;
+  // hide the indicator if isMobile
+  let navIndicatorStyles = {
+    ...linksPosInfo,
+    display: isMobile ? "none" : "block",
+  };
 
   const linkHoverHandler = useCallback((event) => {
     const dimensions = event.target.parentElement.getBoundingClientRect();
@@ -50,6 +54,8 @@ const MainNavigation = () => {
 
       if (windowSize.width <= 768 && chatIsActive)
         dispatch({ type: TOGGLE_CHAT });
+
+      window.scrollTo(0, 0);
     },
     [chatIsActive, dispatch, windowSize.width]
   );
@@ -64,7 +70,7 @@ const MainNavigation = () => {
         };
       }
       return {
-        width: '0',
+        width: "0",
         left: prevState.left,
       };
     });
@@ -72,7 +78,7 @@ const MainNavigation = () => {
 
   const logoClickHandler = () => {
     setLinksPosInfo((prevState) => ({
-      width: '0',
+      width: "0",
       left: prevState.left,
     }));
   };
@@ -108,6 +114,7 @@ const MainNavigation = () => {
           icon={link.icon}
           url={link.url}
           hasSeparator={id === 3}
+          isSvg={link.isSvg}
         />
       ))}
     </ul>

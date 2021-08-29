@@ -1,0 +1,13 @@
+.wheel-bets {
+  width: 98%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .wheel-bets {
+    flex-direction: column;
+  }
+}
