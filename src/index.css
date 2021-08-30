@@ -126,3 +126,44 @@ body::after {
     url('./assets/img/games-related/indicator-icon.svg')
     url('./assets/img/games-related/timer-icon.svg');
 }
+
+/* Avatar colors */
+.lvl-1 {
+  background: #4a4a4a !important;
+}
+
+.lvl-10 {
+  background: #4a4a4a !important;
+}
+
+.lvl-20 {
+  background: #a09f9f !important;
+}
+
+.lvl-30 {
+  background: #a09f9f !important;
+}
+
+.lvl-40 {
+  background: #d19f69 !important;
+}
+
+.lvl-50 {
+  background: #d19f69 !important;
+}
+
+.lvl-60 {
+  background: #fad84e !important;
+}
+
+.lvl-70 {
+  background: #fad84e !important;
+}
+
+.lvl-80 {
+  background: #f3ac3b !important;
+}
+
+.lvl-99 {
+  background: #f3ac3b !important;
+}

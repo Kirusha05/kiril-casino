@@ -84,6 +84,12 @@ const MainNavigation = () => {
   };
 
   const toggleChatHandler = () => {
+    if (windowSize.width <= 768 && !chatIsActive) {
+      document.body.className = 'no-scroll';
+    } else if (windowSize.width <= 768 && chatIsActive) {
+      document.body.className = '';
+    }
+
     dispatch({ type: TOGGLE_CHAT });
   };
 

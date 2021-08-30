@@ -4,7 +4,6 @@ import { ADD_MESSAGE } from '../../store/chatReducer';
 
 import toggleIcon from '../../assets/img/icons/toggle.png';
 import closeIcon from '../../assets/img/icons/cancel.png';
-import socialIcons from './social-config';
 
 import './Chat.css';
 import useWindowSize from '../../hooks/use-windowSize';
@@ -21,6 +20,13 @@ const Chat = () => {
   const windowSize = useWindowSize();
 
   const toggleChatHandler = () => {
+    if (windowSize.width <= 768 && !chatIsActive) {
+      document.body.className = 'no-scroll';
+    } else if (windowSize.width <= 768 && chatIsActive) {
+      document.body.className = '';
+    }
+
+
     dispatch({ type: 'TOGGLE_CHAT' });
   };
 
@@ -47,18 +53,9 @@ const Chat = () => {
     </button>
   );
 
-  const chatSocial = (
-    <div className="chat-social">
-      {socialIcons.map((socialIcon, id) => (
-        <a key={id} href={socialIcon.href} target="_blank" rel="noreferrer">
-          <img src={socialIcon.icon} alt={socialIcon.href} />
-        </a>
-      ))}
-    </div>
-  );
-
   const closeChatMobile = windowSize.width <= 1280 && (
     <div className="chat-close" onClick={toggleChatHandler}>
+      <p>CLOSE</p>
       <img src={closeIcon} alt="Close Chat" />
     </div>
   );

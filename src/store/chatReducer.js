@@ -2,7 +2,7 @@ const initialState = {
   chatIsActive: window.innerWidth > 1280,
   messages: [
     {
-      text: 'Scrollbarul este ascuns, dar poti da scroll',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       author: 'Gxme',
       level: 1,
       levelRange: 1,
@@ -10,7 +10,7 @@ const initialState = {
       id: 1,
     },
     {
-      text: 'Mesajele au timestamp adevarat, ia zi-mi daca corespunde ora :))',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       author: 'Redea',
       level: 99,
       levelRange: 90,
@@ -18,7 +18,7 @@ const initialState = {
       id: 2,
     },
     {
-      text: 'Sunt arătate doar cele mai recente *10* mesaje, dar se poate de schimbat',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       author: 'System',
       level: 99,
       levelRange: 90,

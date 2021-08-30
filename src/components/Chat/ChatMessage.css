@@ -12,8 +12,10 @@
 }
 
 .message-avatar {
-  min-width: 30px;
-  min-height: 30px;
+  /* min-width: 32px; */
+  min-width: 36px;
+  /* min-height: 32px; */
+  min-height: 36px;
   background: gray;
   position: relative;
   border-radius: 50%;
@@ -21,11 +23,11 @@
 }
 
 .message-avatar img {
-  width: 26px;
+  width: 30px;
   border-radius: 50%;
   position: absolute;
-  left: 2px;
-  top: 2px;
+  left: 3px;
+  top: 3px;
   z-index: 10;
 }
 
@@ -41,6 +43,7 @@
   font-weight: bold;
   border-radius: 5px;
   background: gray;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 .author-name {
@@ -67,49 +70,10 @@
 .message-text {
   max-width: 80%;
   position: relative;
+  left: 6px;
   top: -10px;
   color: var(--chat-message-text);
   font-size: 13px;
   line-height: 18px;
   overflow-wrap: break-word;
-}
-
-.lvl-1 {
-  background: gray !important;
-}
-
-.lvl-10 {
-  background: rgb(204, 170, 21) !important;
-}
-
-.lvl-20 {
-  background: rgb(49, 168, 19) !important;
-}
-
-.lvl-30 {
-  background: rgb(23, 173, 173) !important;
-}
-
-.lvl-40 {
-  background: rgb(38, 41, 192) !important;
-}
-
-.lvl-50 {
-  background: rgb(209, 55, 34);
-}
-
-.lvl-60 {
-  background: rgb(15, 168, 109) !important;
-}
-
-.lvl-70 {
-  background: rgb(219, 125, 18) !important;
-}
-
-.lvl-80 {
-  background: rgb(245, 21, 125) !important;
-}
-
-.lvl-90 {
-  background: rgb(190, 11, 206);
 }

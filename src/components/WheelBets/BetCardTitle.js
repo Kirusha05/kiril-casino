@@ -1,7 +1,7 @@
 import React from 'react';
 
 import playerIcon from '../../assets/img/icons/user.svg';
-import cashIcon from '../../assets/img/games-related/cash-icon.svg';
+import cashIcon from '../../assets/img/games-related/cash-icon/cash-icon-white.svg';
 import './BetCardTitle.css';
 
 const BetCardTitle = (props) => {

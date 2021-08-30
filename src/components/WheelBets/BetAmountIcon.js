@@ -1,9 +1,9 @@
 import React from 'react';
 
-import cashGrayIcon from '../../assets/img/games-related/cash-icon/cash-icon-gray.png';
-import cashRedIcon from '../../assets/img/games-related/cash-icon/cash-icon-red.png';
-import cashBlueIcon from '../../assets/img/games-related/cash-icon/cash-icon-blue.png';
-import cashYellowIcon from '../../assets/img/games-related/cash-icon/cash-icon-yellow.png';
+import cashGrayIcon from '../../assets/img/games-related/cash-icon/cash-icon-gray.svg';
+import cashRedIcon from '../../assets/img/games-related/cash-icon/cash-icon-red.svg';
+import cashBlueIcon from '../../assets/img/games-related/cash-icon/cash-icon-blue.svg';
+import cashYellowIcon from '../../assets/img/games-related/cash-icon/cash-icon-yellow.svg';
 
 const BetAmountIcon = (props) => {
   let cashColorImg;

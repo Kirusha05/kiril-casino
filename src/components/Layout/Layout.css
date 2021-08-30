@@ -6,7 +6,7 @@
 }
 
 .main-section main {
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem 5rem 2rem;
   min-height: calc(100vh - 2rem);
 }
 
@@ -25,6 +25,6 @@
 
 @media screen and (max-width: 500px) {
   .main-section main {
-    padding: 2rem 0 0 0;
+    padding: 2rem 0;
   }
 }

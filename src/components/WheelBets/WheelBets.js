@@ -5,16 +5,27 @@ import './WheelBets.css';
 
 import pfp from '../../assets/img/social/user-pfp.png';
 
+const randomItemFromArray = (array) => {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+const DUMMY_PLAYERS = ['Gxme', 'Kirusha', 'Vector_359', 'notGurrNick', 'Anonym0us123'];
+
 const generateRandomBets = () => {
   const bets = [];
 
-  const betsNum = Math.ceil(Math.random() * 10);
+  const betsNum = Math.ceil(Math.random() * 30);
 
   for (let i = 0; i < betsNum; i++) {
     const betAmount = Math.ceil((Math.random() * 5000) / 100) * 100;
+    const randomLvl = Math.ceil(Math.random() * 99);
+    const randomLvlRange = Math.floor(randomLvl / 10) * 10;
+
     const newRandomBet = {
-      username: 'Gxme wow fucker super bvute woohoo',
+      username: randomItemFromArray(DUMMY_PLAYERS),
       avatarImage: pfp,
+      level: randomLvl,
+      levelRange: randomLvlRange,
       betAmount,
     };
 
@@ -32,7 +43,6 @@ const DUMMY_BETS = {
 };
 
 const WheelBets = () => {
-  console.log('WheelBets');
   return (
     <div className="wheel-bets">
       <BetCard bets={DUMMY_BETS.gray} multiplier="2x" color="gray" />

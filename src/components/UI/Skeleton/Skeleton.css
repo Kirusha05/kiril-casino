@@ -1,0 +1,20 @@
+.skeleton-container {
+  width: 100%;
+  height: inherit;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  border: none !important;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-size: 500%;
+  background-position: left;
+  animation: glow 1.2s ease infinite;
+}
+
+@keyframes glow {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
