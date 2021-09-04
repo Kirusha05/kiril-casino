@@ -1,6 +1,6 @@
 const initialState = {
   authModalIsActive: false,
-  isLoggedIn: false,
+  isLoggedIn: true,
 };
 
 export const SHOW_AUTH = 'SHOW_AUTH';

@@ -1,0 +1,42 @@
+.wallet-widget {
+  height: 35px;
+  margin-right: 30px;
+}
+
+.wallet-widget__balance {
+  height: 95%;
+  min-width: 80px;
+  padding: 0 20px;
+  background-color: var(--blue-darker);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--yellow-primary);
+  transition: 0.2s ease;
+}
+
+.wallet-widget__balance:hover {
+  background-color: var(--blue-darkest);
+}
+
+.wallet-widget__balance img {
+  height: 80%;
+  position: relative;
+  top: 3px;
+}
+
+.wallet-widget button {
+  text-transform: uppercase;
+  color: var(--white-primary);
+  background-color: var(--yellow-primary);
+  position: relative;
+  height: 100%;
+  left: -2px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 5px var(--yellow-primary);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+

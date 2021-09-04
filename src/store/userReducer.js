@@ -1,11 +1,17 @@
 const initialState = {
   username: 'Gxme',
-  money: 28283,
-  level: 1
+  money: 1896319,
+  level: 93,
+  levelRange: 90
 };
 
 const userReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case 'SET_MONEY':
+      return { ...state, money: action.money }
+    default:
+      return state;
+  }
 };
 
 export default userReducer;

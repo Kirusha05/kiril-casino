@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./WheelHistory.css";
+import './WheelHistory.css';
 
 const WheelHistory = ({ gameHistory }) => {
   return (

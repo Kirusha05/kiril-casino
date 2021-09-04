@@ -24,6 +24,12 @@
   display: flex;
 }
 
+.chat-close p {
+  position: relative;
+  top: -1px;
+  color: var(--chat-message-text);
+}
+
 .chat-close img {
   max-height: 15px;
   margin-left: 10px;

@@ -1,4 +1,4 @@
-.nav-auth {
+.nav-login {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -18,11 +18,11 @@
   cursor: pointer;
 }
 
-.nav-auth:hover {
+.nav-login:hover {
   box-shadow: 0 0 10px var(--yellow-primary);
 }
 
-.nav-auth img {
+.nav-login img {
   max-height: 1rem;
   cursor: pointer;
   border-radius: 1px;
@@ -37,12 +37,7 @@
     margin-bottom: 5rem;
   }
 
-  .nav-settings li {
-    width: 100%;
-    height: auto;
-  }
-
-  .nav-auth {
+  .nav-login {
     transition: none;
     line-height: 0;
     font-size: 0;
@@ -52,18 +47,18 @@
     width: 100%;
   }
 
-  .nav-auth:hover {
+  .nav-login:hover {
     box-shadow: none;
   }
 
-  .nav-auth img {
+  .nav-login img {
     display: block;
     max-height: 25px;
     margin: 0 auto;
     filter: opacity(0.5) drop-shadow(0 0 0 #b3b3b4);
   }
 
-  .nav-auth img:hover {
+  .nav-login img:hover {
     filter: brightness(0) saturate(100%) invert(70%) sepia(32%) saturate(982%)
       hue-rotate(355deg) brightness(90%) contrast(96%);
   }

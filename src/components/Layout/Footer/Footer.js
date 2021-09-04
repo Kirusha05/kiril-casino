@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__columns">
         <div className="footer-column">
-          <img className="footer-logo" src={mainLogo} alt="CSGOSPARK Logo" />
+          <img className="footer-logo" src={mainLogo} alt="CSGOSPARK Logo" draggable="false" />
           <p>
             Do velit id non nulla consequat pariatur mollit nostrud fugiat id
             ipsum. Laborum culpa laborum deserunt est consectetur ea magna et
@@ -46,6 +46,7 @@ const Footer = () => {
             className="certified"
             src={trustpilotLogo}
             alt="Trustpilot Logo"
+            draggable="false"
           />
         </div>
         <div className="footer-column">
@@ -66,10 +67,11 @@ const Footer = () => {
             className="certified"
             src={begambleawareLogo}
             alt="BeGambleAware Logo"
+            draggable="false"
           />
         </div>
         <div className="footer-column">
-          <h3 className="footer-column__title">CUMunity</h3>
+          <h3 className="footer-column__title">Community</h3>
           <div className="footer-social">
             <a
               href="https://twitter.com"
@@ -77,7 +79,7 @@ const Footer = () => {
               rel="noreferrer"
               className="footer-social__wrapper flex-center"
             >
-              <img src={twitterLogo} alt="Twitter" />
+              <img src={twitterLogo} alt="Twitter" draggable="false" />
             </a>
             <a
               href="https://instagram.com"
@@ -85,7 +87,7 @@ const Footer = () => {
               rel="noreferrer"
               className="footer-social__wrapper flex-center"
             >
-              <img src={instagramLogo} alt="Instagram" />
+              <img src={instagramLogo} alt="Instagram" draggable="false" />
             </a>
             <a
               href="https://steamcommunity.com/id/gxmee"
@@ -93,7 +95,7 @@ const Footer = () => {
               rel="noreferrer"
               className="footer-social__wrapper flex-center"
             >
-              <img src={steamLogo} alt="Steam" />
+              <img src={steamLogo} alt="Steam" draggable="false" />
             </a>
             <a
               href="https://discord.com"
@@ -101,7 +103,7 @@ const Footer = () => {
               rel="noreferrer"
               className="footer-social__wrapper flex-center"
             >
-              <img src={discordLogo} alt="Discord" />
+              <img src={discordLogo} alt="Discord" draggable="false" />
             </a>
           </div>
         </div>

@@ -3,6 +3,7 @@
   background-color: var(--blue-darkest);
   width: 100%;
   position: relative;
+  user-select: none;
 }
 
 .channel-toggle-icon {
@@ -36,7 +37,7 @@
   border-radius: 5px;
   z-index: 30;
 
-  animation: grow-height 0.2s ease forwards;
+  animation: fade-in 0.2s ease forwards;
 }
 
 .chat-channel__channels ul {
@@ -60,7 +61,7 @@
   background-color: var(--blue-darker);
 }
 
-@keyframes grow-height {
+@keyframes fade-in {
   from {
     opacity: 0;
   } to {

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import WheelBets from '../components/WheelBets/WheelBets';
+import WheelMakeBet from '../components/WheelMakeBet/WheelMakeBet';
 import WheelWidget from '../components/WheelWidget/WheelWidget';
 
 const WheelPage = () => {
@@ -8,6 +9,7 @@ const WheelPage = () => {
   return (
     <>
       <WheelWidget />
+      <WheelMakeBet />
       <WheelBets />
     </>
   );

@@ -1,0 +1,120 @@
+.wheel-make-bet-wrapper {
+  position: absolute;
+  left: 50px;
+  right: 0;
+  top: 240px;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+
+.wheel-make-bet {
+  width: 300px;
+  color: var(--white-faded);
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wbet-main-input {
+  width: 100%;
+  background-color: var(--blue-darker);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin: 10px 0;
+}
+
+.wbet-main-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  color: var(--white-faded-important);
+  padding-left: 10px;
+}
+
+.wbet-main-input input::placeholder {
+  color: var(--white-faded);
+}
+
+.wbet-main-input__controls {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.wbet-main-input__controls button {
+  height: 100%;
+  flex: 1;
+  padding: 0 10px;
+  color: var(--white-faded);
+  font-size: 1rem;
+  font-weight: bold; 
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.wbet-main-input__controls button:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.wbet-main-input__controls button:hover {
+  color: var(--yellow-primary);
+}
+
+.wbet-controls {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.wbet-controls button {
+  flex: 1;
+  height: 35px;
+  background-color: var(--blue-darker);
+  color: var(--white-faded);
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 12px;
+  font-weight: bold; 
+}
+
+.wbet-controls button:last-of-type {
+  margin: 0;
+}
+
+.wbet-controls button:hover {
+  color: var(--yellow-primary);
+}
+
+@media screen and (min-width: 1600px) {
+  .wheel-make-bet-wrapper {
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wheel-make-bet-wrapper {
+    position: static;
+    margin: 100px auto 0;
+    width: 90%;
+  }
+
+  .wheel-make-bet {
+    width: 100%;
+  }
+
+  .wbet-controls button {
+    font-size: 0.8rem;  
+  }
+}

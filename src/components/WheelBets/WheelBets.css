@@ -6,6 +6,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .wheel-bets {
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .wheel-bets {
     flex-direction: column;

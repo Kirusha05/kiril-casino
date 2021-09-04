@@ -7,8 +7,8 @@
 }
 
 .footer-logo {
-  max-height: 50px;
-  margin: 0 !important;
+  max-height: 60px;
+  margin: 12px 0;
 }
 
 .footer__columns {
@@ -21,8 +21,7 @@
 
 .footer-column {
   font-family: 'Proxima Nova',sans-serif;
-  flex-basis: 15%;
-  margin: 0 10px;
+  flex-basis: 12%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -30,15 +29,16 @@
 }
 
 .footer-column__title {
-  margin: 6px 0 16px 0;
+  margin: 23px 0;
   font-family: 'Oswald';
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  color:rgba(var(--white-primary-rgb-values), 0.8)
 }
 
 .footer-column:first-of-type {
   flex-basis: 50%;
   margin: 0 50px 0 0;
-  text-align: justify;
+  text-align: left;
   line-height: 20px;
 }
 
@@ -47,17 +47,24 @@
 }
 
 .footer-column a.internal-link {
-  /* color: rgba(var(--white-primary-rgb-values), 0.6); */
-  color: var(--yellow-primary);
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
+  color: rgba(var(--white-primary-rgb-values), 0.6);
+  /* color: var(--yellow-primary); */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  /* font-weight: bold; */
   display: block;
   text-decoration: none;
-  margin: 5px 0;
+  margin: 3px 0;
+  transition: 0.2s ease;
+}
+
+.footer-column a.internal-link:hover {
+  color: var(--yellow-primary);
+  text-shadow: 0 0 10px var(--yellow-primary);
 }
 
 .footer-column .certified {
-  max-height: 40px;
+  max-height: 35px;
   max-width: 90%;
   margin-top: 20px;
 }
@@ -75,19 +82,24 @@
 }
 
 .footer-social {
-  max-width: 80px;
+  max-width: 90px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .footer-social__wrapper {
   background-color: var(--yellow-primary);
-  flex-basis: 30px;
-  height: 30px;
+  flex-basis: 35px;
+  height: 35px;
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0 10px 10px 0;
   border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.footer-social__wrapper:hover {
+  box-shadow: 0 0 10px var(--yellow-primary);
 }
 
 .footer-social__wrapper img {
@@ -104,8 +116,8 @@
   display: inline;
 }
 
-@media screen and (max-width: 800px) {
-  p {
+@media screen and (max-width: 1000px) {
+  footer p {
     font-size: 0.8rem;
   }
 
@@ -139,7 +151,7 @@
   }
 
   .footer-social {
-    max-width: 160px;
+    max-width: 180px;
   }
 
   .footer-copyright {

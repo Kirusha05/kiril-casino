@@ -5,6 +5,8 @@ import './Wheel.css';
 const extraDegrees = 3 * 360; // 3 full circles
 let isInitial = true;
 
+const animationTiming = 'ease';
+
 const getDegsToNumFromNeutral = (num) => {
   // num * 6.66 gets the degrees to the section, but because we rotate in clockwise, we will get the num position in the anti-clockwise, so we subtract from 360degs to get the opposite arc degrees
   const degs = 360 - num * 6.66; // 360degs / 54 wheel sections = 6.66degs per section
@@ -39,7 +41,7 @@ const WOF = (props) => {
       transform: `rotateZ(${(degsToNum + extraDegrees + extraOffset).toFixed(
         2
       )}deg)`,
-      transition: `${spinDuration}ms ease`,
+      transition: `${spinDuration}ms ${animationTiming}`,
     });
 
     // set the wheel rotation point to the same num after 100ms, but without the extra spin, so during the next spins the wheel will ALWAYS rotate clockwise, will be under 360degs

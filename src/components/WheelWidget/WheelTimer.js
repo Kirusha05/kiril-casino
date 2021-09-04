@@ -11,7 +11,7 @@ const WheelTimer = (props) => {
     <div className="wheel-timer-wrapper">
       <p>Game starts in</p>
       <div className="wheel-timer">
-        <img src={timerIcon} alt="Timer Icon" />
+        <img src={timerIcon} alt="Timer Icon" draggable="false" />
         <span>{formattedTime}</span>
       </div>
     </div>

@@ -11,7 +11,7 @@ const initialState = {
     },
     {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      author: 'Redea',
+      author: 'Kirusha',
       level: 99,
       levelRange: 90,
       timestamp: '07:34',
