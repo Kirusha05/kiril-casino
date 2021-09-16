@@ -70,18 +70,18 @@
 .wbet-controls {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .wbet-controls button {
-  flex: 1;
+  /* flex: 1; */
+  padding: 0 8px;
   height: 35px;
   background-color: var(--blue-darker);
   color: var(--white-faded);
   border: none;
   border-radius: 5px;
-  margin-right: 5px;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.2s ease;
@@ -97,6 +97,27 @@
   color: var(--yellow-primary);
 }
 
+/* Multiplier indicator span colors */
+.multiplier-gray {
+  color: var(--casino-gray);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 0 5px var(--casino-gray);
+}
+
+.multiplier-red {
+  color: var(--casino-red);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 0 7px var(--casino-red);
+}
+
+.multiplier-blue {
+  color: var(--casino-blue);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 0 7px var(--casino-blue);
+}
+
+.multiplier-yellow {
+  color: var(--casino-yellow);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 0 7px var(--casino-yellow);
+}
+
 @media screen and (min-width: 1600px) {
   .wheel-make-bet-wrapper {
     left: 150px;
@@ -106,7 +127,7 @@
 @media screen and (max-width: 1200px) {
   .wheel-make-bet-wrapper {
     position: static;
-    margin: 100px auto 0;
+    margin: 80px auto 20px;
     width: 90%;
   }
 
@@ -116,5 +137,11 @@
 
   .wbet-controls button {
     font-size: 0.8rem;  
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wbet-controls button {
+    padding: 0 5px;
   }
 }

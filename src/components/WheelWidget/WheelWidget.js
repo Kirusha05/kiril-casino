@@ -12,10 +12,11 @@ import {
   getRandomColor,
 } from './wheel-utils';
 
-const timerStartingTime = 5000; // milliseconds
+const timerStartingTime = 15000; // milliseconds
 const timerOffset = 10; // milliseconds
 const spinDuration = 7000; // milliseconds
 const newRoundDelay = 500;
+const showingResultsDelay = 3000;
 
 const populateHistoryWithFakeResults = () => {
   const history = [];
@@ -29,17 +30,20 @@ const populatedHistory = populateHistoryWithFakeResults();
 
 const maxHistoryResults = 100;
 
-const WheelWidget = () => {
+const WheelWidget = (props) => {
   const [wheelNum, setWheelNum] = useState(0);
   const [time, setTime] = useState(timerStartingTime);
   const [indicatorColor, setIndicatorColor] = useState(
     getColorHexFromNum(wheelNum)
   );
   const [gameHistory, setGameHistory] = useState(populatedHistory);
+  const [makePause, setMakePause] = useState(false);
+
+  const { disableAllBets, onRoundEnd, enableAllBets, onSpin } = props;
 
   // useEffect only after mounting
   useEffect(() => {
-    // interval to set the countdown
+    // interval to set the spinning countdown/timer
     const interval = setInterval(() => {
       setTime((prevTime) => {
         return prevTime - timerOffset > 0 ? prevTime - timerOffset : 0;
@@ -51,10 +55,15 @@ const WheelWidget = () => {
 
   // useEffect depending on timer
   useEffect(() => {
-    if (time !== 0) return;
-    // The timer is 0, so it's time to spin the wheel :)
+    // Return if wheel needs a pause to display the round results in WheelBets component;
+    // if (makePause) return;
+    if (time !== 0 || makePause) return;
 
-    // get a random num, will be replaced with server generated one
+    // The timer is 0, so it's time to spin the wheel :)
+    // Hide all the bets
+    disableAllBets();
+    onSpin(true);
+    // Get a random num, will be replaced with server generated one
     const randomNum = Math.floor(Math.random() * 54);
     const newResult = {
       num: randomNum,
@@ -62,22 +71,29 @@ const WheelWidget = () => {
     };
     setWheelNum(randomNum);
 
-    // after the complete spin, reset the countdown and set the indicator color
+    // After the complete spin, set the indicator color and the new history and set new timeout for a little pause for showing results
     const timeout = setTimeout(() => {
-      setTime(timerStartingTime);
       setIndicatorColor(getColorHexFromNum(randomNum));
+      setGameHistory((prevHistory) =>
+        [newResult, ...prevHistory].slice(0, maxHistoryResults)
+      );
+      setMakePause(true);
 
-      setGameHistory((prevHistory) => {
-        if (prevHistory.length < maxHistoryResults) {
-          return [newResult, ...prevHistory];
-        } else {
-          return [newResult, ...prevHistory].slice(0, maxHistoryResults);
-        }
-      });
+      // hide the losing bet columns
+      onRoundEnd(newResult.color);
+      onSpin(false);
+
+      setTimeout(() => {
+        // show all the bet columns again
+        enableAllBets();
+        // reset the timer and makePause control variable
+        setTime(timerStartingTime);
+        setMakePause(false);
+      }, showingResultsDelay);
     }, spinDuration + newRoundDelay);
 
     return () => clearTimeout(timeout);
-  }, [time]);
+  }, [time, onRoundEnd, enableAllBets, makePause, disableAllBets, onSpin]);
 
   return (
     <div className="wheel-widget">

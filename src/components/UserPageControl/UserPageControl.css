@@ -1,0 +1,9 @@
+.user-page-control { 
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 440px) {
+  .user-page-control {
+    flex-direction: column;
+  }
+}

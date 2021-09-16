@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 
+import gifIcon from '../../assets/img/icons/gif.svg';
+import emotesIcon from '../../assets/img/icons/emotes.svg';
 import sendIcon from '../../assets/img/icons/send.svg';
 import './ChatForm.css';
 
@@ -60,6 +62,12 @@ const ChatForm = (props) => {
         onMouseOver={() => messageInputRef.current.focus()}
         ref={messageInputRef}
       />
+      <button type="button">
+        <img src={gifIcon} alt="Gif" className="general-icon" />
+      </button>
+      <button type="button">
+        <img src={emotesIcon} alt="Emotes" className="general-icon" />
+      </button>
       <button>
         <img src={sendIcon} alt="Send" className="general-icon" />
       </button>

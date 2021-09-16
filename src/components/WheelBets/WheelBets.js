@@ -9,7 +9,13 @@ const randomItemFromArray = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
-const DUMMY_PLAYERS = ['Gxme', 'Kirusha', 'Vector_359', 'notGurrNick', 'Anonym0us123'];
+const DUMMY_PLAYERS = [
+  'Gxme',
+  'Kirusha',
+  'Vector_359',
+  'notGurrNick',
+  'Anonym0us123',
+];
 
 const generateRandomBets = () => {
   const bets = [];
@@ -42,13 +48,41 @@ const DUMMY_BETS = {
   yellow: generateRandomBets(),
 };
 
-const WheelBets = () => {
+const WheelBets = (props) => {
   return (
     <div className="wheel-bets">
-      <BetCard bets={DUMMY_BETS.gray} multiplier="2x" color="gray" />
-      <BetCard bets={DUMMY_BETS.red} multiplier="3x" color="red" />
-      <BetCard bets={DUMMY_BETS.blue} multiplier="5x" color="blue" />
-      <BetCard bets={DUMMY_BETS.yellow} multiplier="50x" color="yellow" />
+      <BetCard
+        userBet={props.userBets.gray}
+        bets={DUMMY_BETS.gray}
+        multiplier="2x"
+        color="gray"
+        isDisabled={props.disabledBets.gray}
+        onCardClick={props.makeNewBet}
+      />
+      <BetCard
+        userBet={props.userBets.red}
+        bets={DUMMY_BETS.red}
+        multiplier="3x"
+        color="red"
+        isDisabled={props.disabledBets.red}
+        onCardClick={props.makeNewBet}
+      />
+      <BetCard
+        userBet={props.userBets.blue}
+        bets={DUMMY_BETS.blue}
+        multiplier="5x"
+        color="blue"
+        isDisabled={props.disabledBets.blue}
+        onCardClick={props.makeNewBet}
+      />
+      <BetCard
+        userBet={props.userBets.yellow}
+        bets={DUMMY_BETS.yellow}
+        multiplier="50x"
+        color="yellow"
+        isDisabled={props.disabledBets.yellow}
+        onCardClick={props.makeNewBet}
+      />
     </div>
   );
 };

@@ -1,5 +1,9 @@
 .bet-card__bets {
   width: 100%;
+  background-color: var(--blue-darker);
+  height: 450px;
+  border-radius: 10px;
+  position: relative;
 }
 
 .player-bet {
@@ -14,6 +18,9 @@
 
 .player-bet:first-child {
   background: var(--blue-darkest);
+  padding-top: 22px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .player-bet:first-child .player-name {

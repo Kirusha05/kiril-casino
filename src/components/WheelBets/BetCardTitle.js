@@ -6,7 +6,11 @@ import './BetCardTitle.css';
 
 const BetCardTitle = (props) => {
   return (
-    <div className="bet-card__title">
+    <div
+      className={`bet-card__title${props.isDisabled ? ' disabled' : ''}`}
+      onClick={!props.isDisabled ? props.onCardTitleClick : undefined}
+    >
+      <div className="hover-dark"></div>
       <div className="betting-players flex-center">
         <img src={playerIcon} alt="Players Icon" draggable="false" />
         <span>{props.playersNum}</span>

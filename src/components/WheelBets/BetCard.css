@@ -3,26 +3,62 @@
   height: 500px;
   font-family: 'Roboto';
   padding-bottom: 10px;
-  background-color: var(--blue-darker);
-  border-radius: 10px;
+  position: relative;
 }
 
-.bet-card.gray {
+.bet-card .hover-dark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  z-index: 20;
+  transition: 0.2s ease;
+}
+
+.bet-card.disabled .hover-dark {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+/* Bets border down */
+.bet-card.gray .bet-card__bets {
   border-bottom: 3px solid var(--casino-gray);
 }
 
-.bet-card.red {
+.bet-card.red .bet-card__bets {
   border-bottom: 3px solid var(--casino-red);
 }
 
-.bet-card.blue {
+.bet-card.blue .bet-card__bets {
   border-bottom: 3px solid var(--casino-blue);
 }
 
-.bet-card.yellow {
+.bet-card.yellow .bet-card__bets {
   border-bottom: 3px solid var(--casino-yellow);
 }
 
+/* Bets bordertop */
+.bet-card.gray .player-bet:first-child {
+  border-top: 3px solid var(--casino-gray) !important;
+}
+
+.bet-card.red .player-bet:first-child {
+  border-top: 3px solid var(--casino-red) !important;
+}
+
+.bet-card.blue .player-bet:first-child {
+  border-top: 3px solid var(--casino-blue) !important;
+}
+
+.bet-card.yellow .player-bet:first-child {
+  border-top: 3px solid var(--casino-yellow) !important;
+}
+
+/* Bet Card's Title background colors */
 
 .bet-card.gray .bet-card__title {
   background-color: var(--casino-gray);
@@ -64,26 +100,10 @@
   fill: var(--casino-yellow);
 }
 
-/* .bet-card.gray .player-bet:last-child {
-  border-bottom: 1px solid var(--casino-gray) !important;
-}
-
-.bet-card.red .player-bet:last-child {
-  border-bottom: 1px solid var(--casino-red) !important;
-}
-
-.bet-card.blue .player-bet:last-child {
-  border-bottom: 1px solid var(--casino-blue) !important;
-}
-
-.bet-card.yellow .player-bet:last-child {
-  border-bottom: 1px solid var(--casino-yellow) !important;
-} */
-
 @media screen and (max-width: 1000px) {
   .bet-card {
     width: 90%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }

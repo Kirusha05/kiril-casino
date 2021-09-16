@@ -1,0 +1,13 @@
+.user-bet-amount {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-65%);
+  font-size: 0.8rem;
+}
+
+.user-bet-amount img {
+  max-height: 20px;
+  position: relative;
+  top: 8px;
+}

@@ -25,6 +25,7 @@ const BetCardBets = (props) => {
           </div>
         </div>
       ))}
+      <div className="hover-dark"></div>
     </div>
   );
 };

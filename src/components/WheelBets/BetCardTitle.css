@@ -5,10 +5,16 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom: 3px solid var(--white-primary);
+  border-radius: 8px;
+  margin-bottom: 10px;
   user-select: none;
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+.bet-card__title:hover > .hover-dark {
+  opacity: 1;
 }
 
 .betting-players, .betting-sum, .betting-multiplier {

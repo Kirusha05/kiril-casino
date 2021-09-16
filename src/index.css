@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/flama-medium');
 
 * {
   box-sizing: border-box;
@@ -24,13 +25,28 @@
 }
 
 :root {
-  --blue-dark: #2e2c49;
-  --blue-darker: #282641;
-  --blue-darkest: #1a182e;
 
-  --bg-primary: #33314d;
+  /* gray-theme */
+  /* --theme-color: 0, 0%;
+  --blue-dark: hsl(var(--theme-color), 15%);
+  --blue-darker: hsl(var(--theme-color), 12%);
+  --blue-darkest: hsl(var(--theme-color), 8%);
+  --bg-primary: hsl(var(--theme-color), 14%); */
+  /* --yellow-primary: #c9291d; */
 
+  /* blue-theme */
+  --theme-color: 244, 25%;
+  --blue-dark: hsl(var(--theme-color), 23%);
+  --blue-darker: hsl(var(--theme-color), 20%);
+  --blue-darkest: hsl(var(--theme-color), 13%);
+  --bg-primary:  hsl(var(--theme-color), 25%);
   --yellow-primary: #e2a128;
+
+  /* --blue-dark: #2e2c49;
+  --blue-darker: #282641;
+  --blue-darkest: #1a182e; */
+  /* --bg-primary: #33314d; */
+
 
   --white-primary: rgb(235, 235, 235);
   --white-primary-rgb-values: 235, 235, 235;
@@ -44,7 +60,7 @@
   --danger-primary: rgb(255, 101, 101);
 
   --nav-width: 4rem;
-  --nav-height: 3rem;
+  --nav-height: 55px;
 
   --chat-width: 250px;
 
@@ -122,6 +138,13 @@ svg {
   overflow: hidden;
 }
 
+.welcome-message {
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: var(--yellow-primary);
+}
+
 body::after {
   position: absolute;
   width: 0;
@@ -131,6 +154,10 @@ body::after {
   content: url('./assets/img/games-related/wheel.png')
     url('./assets/img/games-related/indicator-icon.svg')
     url('./assets/img/games-related/timer-icon.svg');
+}
+
+.wave {
+  fill: var(--blue-darkest) !important;
 }
 
 /* Avatar colors */

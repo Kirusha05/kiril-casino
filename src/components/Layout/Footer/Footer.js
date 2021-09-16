@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import mainLogo from '../../../assets/img/logos/logo.svg';
@@ -13,8 +13,20 @@ import discordLogo from '../../../assets/img/logos/discord.svg';
 import './Footer.css';
 
 const Footer = () => {
+  const footerElement = useRef(null);
+  
+  useEffect(() => {
+    const distance = footerElement.current.getBoundingClientRect();
+    window.addEventListener('scroll', () => {
+      if (window.scrollY + window.innerHeight > distance.top + 100) {
+        footerElement.current.firstChild.style.opacity = '1';
+        footerElement.current.firstChild.style.transform = 'translateY(0)';
+      }
+    });
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer className="footer" ref={footerElement}>
       <div className="footer__columns">
         <div className="footer-column">
           <img className="footer-logo" src={mainLogo} alt="CSGOSPARK Logo" draggable="false" />

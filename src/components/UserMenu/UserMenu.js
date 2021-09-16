@@ -1,27 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { LOGOUT } from '../../../store/authReducer';
+import { LOGOUT } from '../../store/authReducer';
 
-import toggleIcon from '../../../assets/img/icons/toggle.png';
-import avatarIcon from '../../../assets/img/social/user-pfp.png';
-import userIcon from '../../../assets/img/icons/user.svg';
-import fairnessIcon from '../../../assets/img/icons/fairness.svg';
-import historyIcon from '../../../assets/img/icons/history.svg';
-import logoutIcon from '../../../assets/img/icons/logout.svg';
-import './NavUser.css';
+import toggleIcon from '../../assets/img/icons/toggle.png';
+import avatarIcon from '../../assets/img/social/user-pfp.png';
+import userIcon from '../../assets/img/icons/user.svg';
+import fairnessIcon from '../../assets/img/icons/fairness.svg';
+import historyIcon from '../../assets/img/icons/history.svg';
+import logoutIcon from '../../assets/img/icons/logout.svg';
+import './UserMenu.css';
 
 const NavAvatar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const userMenuRef = useRef();
 
   const dispatch = useDispatch();
   const level = useSelector((state) => state.user.level);
   const levelRange = useSelector((state) => state.user.levelRange);
 
-  const toggleHandler = () => setIsOpen(!isOpen);
+  const toggleHandler = useCallback(
+    () => setIsOpen((prevOpen) => !prevOpen),
+    []
+  );
   const signOut = () => dispatch({ type: LOGOUT });
 
+  // Close User Menu on blur, click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (userMenuRef.current && !userMenuRef.current.contains(event.target) && isOpen)
+        toggleHandler();
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [userMenuRef, toggleHandler, isOpen]);
+
   return (
-    <div className="nav-user flex-center" onClick={toggleHandler}>
+    <div
+      className="user-menu flex-center"
+      onClick={toggleHandler}
+      ref={userMenuRef}
+    >
       <div className={`nav-avatar lvl-${levelRange}`}>
         <span className={`nav-avatar__level lvl-${levelRange}`}>{level}</span>
         <img src={avatarIcon} alt="User" draggable="false" />
@@ -32,7 +53,7 @@ const NavAvatar = () => {
         alt="Toggle Chat"
       />
       {isOpen && (
-        <div className="nav-user__options">
+        <div className="user-menu__options">
           <ul>
             <li onClick={null}>
               <img src={userIcon} alt="Account" />

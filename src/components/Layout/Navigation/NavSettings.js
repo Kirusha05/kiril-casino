@@ -1,24 +1,21 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { SHOW_AUTH, LOGOUT } from '../../../store/authReducer';
+import { SHOW_AUTH } from '../../../store/authReducer';
 
-import WalletWidget from './WalletWidget';
-import NavUser from './NavUser';
+import WalletWidget from '../../WalletWidget/WalletWidget';
+import UserMenu from '../../UserMenu/UserMenu';
 import authIcon from '../../../assets/img/icons/user.svg';
-// import logoutIcon from '../../../assets/img/icons/logout.png';
 
 import './NavSettings.css';
+import useWindowSize from '../../../hooks/use-windowSize';
 
 const NavSettings = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const windowSize = useWindowSize();
 
   const loginClickHandler = () => {
     dispatch({ type: SHOW_AUTH });
-  };
-
-  const logoutClickHandler = () => {
-    dispatch({ type: LOGOUT });
   };
 
   const notLoggedIn = (
@@ -28,12 +25,18 @@ const NavSettings = () => {
     </button>
   );
 
-  const loggedIn = (
-    <>
-      <WalletWidget />
-      <NavUser />
-    </>
-  );
+  const loggedIn =
+    windowSize.width > 1280 ? (
+      <>
+        <WalletWidget />
+        <UserMenu />
+      </>
+    ) : (
+      <button onClick={loginClickHandler} className="nav-login flex-center">
+        <img src={authIcon} alt="Authorization button" draggable="false" />
+        Sign In
+      </button>
+    );
 
   return (
     <div className="nav-settings flex-center">

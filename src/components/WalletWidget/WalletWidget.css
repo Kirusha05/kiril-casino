@@ -1,18 +1,18 @@
 .wallet-widget {
-  height: 35px;
+  height: 40px;
   margin-right: 30px;
 }
 
 .wallet-widget__balance {
   height: 95%;
-  min-width: 80px;
-  padding: 0 20px;
+  min-width: 150px;
   background-color: var(--blue-darker);
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   font-size: 0.9rem;
   color: var(--yellow-primary);
   transition: 0.2s ease;
+  position: relative;
 }
 
 .wallet-widget__balance:hover {
@@ -32,11 +32,17 @@
   position: relative;
   height: 100%;
   left: -2px;
-  padding: 0 10px;
+  padding: 0 15px;
   border: none;
   border-radius: 4px;
   box-shadow: 0 0 5px var(--yellow-primary);
   text-shadow: 0 0 3px rgba(0, 0, 0, 1);
   cursor: pointer;
+  font-family: 'Flama Medium', 'sans-serif' !important;
 }
 
+@media screen and (max-width: 440px) {
+  .wallet-widget {
+    margin: 0 0 8px 0;
+  }
+}

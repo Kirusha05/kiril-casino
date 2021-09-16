@@ -1,19 +1,25 @@
 import React from 'react';
 
 import BannerSlider from '../components/BannerSlider/BannerSlider';
-import Banner from '../components/UI/Banner/Banner';
 import GameSelector from '../components/GameSelector/GameSelector';
 import { useSelector } from 'react-redux';
 
 const Homepage = () => {
-  const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const username = useSelector((state) => state.user.username);
   let welcomeBack = null;
-  if (isLoggedIn) welcomeBack = <Banner title="Welcome!" subtitle="Good luck at gambling!" details={["Acum bagă niște bani :)"]} individual />
+  if (isLoggedIn)
+    welcomeBack = (
+      <>
+        <p className="welcome-message">Welcome back, {username}!</p>
+        <BannerSlider />
+      </>
+    );
 
   return (
     <>
       {welcomeBack}
-      <BannerSlider />
+      {!isLoggedIn && <BannerSlider />}
       <GameSelector />
     </>
   );
