@@ -68,7 +68,7 @@ const WheelPage = () => {
       }
       setDisabledBets(hiddenColorsMap);
 
-      // if user made no bet (em)
+      // if user made no bet (every color is null)
       if (Object.values(userBets).every((color) => !color)) return;
 
       for (let betColor in userBets) {
@@ -128,8 +128,6 @@ const WheelPage = () => {
 
   const disableAllBets = useCallback(() => {
     setDisabledBets(disabledBetsOnSpin);
-
-    amountInputRef.current.blur();
   }, []);
 
   return (

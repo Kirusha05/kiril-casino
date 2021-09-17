@@ -8,7 +8,7 @@
 
 @media screen and (max-width: 1200px) {
   .wheel-bets {
-    margin-top: 0;
+    margin: 0 auto 20px;
   }
 }
 
@@ -16,5 +16,6 @@
   .wheel-bets {
     flex-direction: column;
     margin-top: -30px;
+    margin-bottom: 0;
   }
 }

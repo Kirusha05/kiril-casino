@@ -9,6 +9,7 @@
 @media screen and (max-width: 1200px) {
   .wheel-widget {
     overflow: hidden;
+    margin: 0 auto 80px;
   }
 }
 

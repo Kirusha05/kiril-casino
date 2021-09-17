@@ -158,9 +158,14 @@ svg {
 
 .welcome-message {
   font-size: 2rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  color: rgba(var(--white-primary-rgb-values), 0.8);
+}
+
+.welcome-message span {
   color: var(--yellow-primary);
+  font-weight: bold;
 }
 
 body::after {

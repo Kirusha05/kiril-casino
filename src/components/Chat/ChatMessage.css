@@ -34,14 +34,20 @@
 .user-level {
   z-index: 15;
   position: absolute;
-  left: 5px;
+  left: 7px;
   transform: translateX(-50%);
-  bottom: -5px;
-  padding: 2px 3px;
-  line-height: 12px;
-  font-size: 12px;
+  bottom: -2px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  /* padding: 2px 3px; */
+  /* line-height: 12px; */
+  /* border-radius: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
   font-weight: bold;
-  border-radius: 5px;
   background: gray;
   text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }

@@ -11,7 +11,7 @@ const Homepage = () => {
   if (isLoggedIn)
     welcomeBack = (
       <>
-        <p className="welcome-message">Welcome back, {username}!</p>
+        <p className="welcome-message">Welcome back, <span>{username}</span>!</p>
         <BannerSlider />
       </>
     );
