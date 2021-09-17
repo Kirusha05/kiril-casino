@@ -22,7 +22,7 @@ const NavLink = (props) => {
         onMouseEnter={onHover}
       >
         {!isButton ? (
-          <Link to={url} className="general-icon" onClick={onLinkClick}>
+          <Link to={url} className="general-icon flex-center" onClick={onLinkClick}>
             <img src={icon} alt={name} className={isSvg ? 'svg-icon' : ''} />
             {name}
           </Link>
