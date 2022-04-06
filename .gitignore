@@ -13,6 +13,12 @@ firebase-debug.*.log*
 # React Build 
 build/
 
+# Others
+csgostar@ftp.csgospark.com.lnk
+.htaccess
+.htaccess_default
+csgo-spark-design/
+
 # Firebase config
 
 # Uncomment this if you'd like others to create their own Firebase project.

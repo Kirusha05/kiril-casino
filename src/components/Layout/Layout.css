@@ -7,7 +7,7 @@
 
 .main-section main {
   padding: 2rem 2rem 5rem 2rem;
-  min-height: calc(103vh);
+  min-height: 103vh;
   position: relative;
 }
 

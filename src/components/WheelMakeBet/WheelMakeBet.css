@@ -16,8 +16,11 @@
 
 .wbet-main-input {
   width: 100%;
-  background-color: var(--blue-darker);
-  border-radius: 5px;
+  /* background-color: var(--blue-darker); */
+  background: transparent;
+  box-shadow: inset 2px 2px 5px #27253e,
+              inset -2px -2px 5px #3d3b62;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   height: 35px;
@@ -78,15 +81,23 @@
   /* flex: 1; */
   padding: 0 8px;
   height: 35px;
-  background-color: var(--blue-darker);
+  /* background-color: var(--blue-darker); */
+  background: transparent;
+  box-shadow:  2px 2px 5px #27253e,
+             -2px -2px 5px #3d3b62;
   color: var(--white-faded);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.2s ease;
   font-size: 12px;
   font-weight: bold; 
+}
+
+.wbet-controls button:active {
+  box-shadow:  inset 2px 2px 5px #27253e,
+             inset -2px -2px 5px #3d3b62;
 }
 
 .wbet-controls button:last-of-type {

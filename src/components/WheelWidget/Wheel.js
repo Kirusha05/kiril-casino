@@ -12,7 +12,7 @@ const getDegsToNumFromNeutral = (num) => {
   const degs = 360 - num * 6.66; // 360degs / 54 wheel sections = 6.66degs per section
   return degs;
 };
-
+// Wheel Of Fortune
 const WOF = (props) => {
   const { num, spinDuration } = props;
 
